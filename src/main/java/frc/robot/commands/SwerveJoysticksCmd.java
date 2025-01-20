@@ -4,7 +4,6 @@ import java.util.function.Supplier;
 import edu.wpi.first.math.filter.SlewRateLimiter;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 
 import frc.robot.subsystems.SwerveSubsystem;
@@ -34,7 +33,6 @@ public class SwerveJoysticksCmd extends Command {
 
             addRequirements(swerveSubsystem);
     }
-    
 
     @Override
     public void initialize() {
@@ -62,17 +60,7 @@ public class SwerveJoysticksCmd extends Command {
         
         // 4. Contruct desired chassis speeds
         ChassisSpeeds chassisSpeeds;
-        //   if(fieldOrientedFunction.get()){
-        //       // Relative to field
-        //       chassisSpeeds = ChassisSpeeds.fromFieldRelativeSpeeds(
-        //           xSpeed, ySpeed, turningSpeed, swerveSubsystem.getRotation2d());
-        //           SmartDashboard.putBoolean("FIELD-ORIENTED", true);
-        //           //System.out.println("CHASSIS SPEED WITH FIELD ORIENTED!");
-        //   }
-        //   else {
-            chassisSpeeds = new ChassisSpeeds(xSpeed, ySpeed, turningSpeed);
-            //System.out.println("WITHOUT FIELD ORIENT!");
-        //}
+        chassisSpeeds = new ChassisSpeeds(xSpeed, ySpeed, turningSpeed);
 
         // 5. Convert chassis speeds to idividual module states
         SwerveModuleState[] moduleStates = DriveConstants.kDriveKinematics.toSwerveModuleStates(chassisSpeeds);
