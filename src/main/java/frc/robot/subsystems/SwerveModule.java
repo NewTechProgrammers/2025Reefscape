@@ -6,34 +6,20 @@ import com.revrobotics.spark.SparkBase.PersistMode;
 
 import com.revrobotics.spark.SparkBase.ResetMode;
 
-import com.revrobotics.spark.SparkClosedLoopController;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.revrobotics.spark.config.SparkMaxConfig;
 
 import edu.wpi.first.math.controller.PIDController;
-import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import edu.wpi.first.math.geometry.Rotation2d;
-
-import com.ctre.phoenix6.hardware.CANcoder;
-import com.ctre.phoenix6.configs.CANcoderConfiguration;
 import com.revrobotics.RelativeEncoder;
 
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.ModuleConstants;
 
-import edu.wpi.first.math.geometry.*;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
-
-
-import edu.wpi.first.wpilibj.AnalogInput;
-import edu.wpi.first.wpilibj.RobotController;
-
-import edu.wpi.first.math.kinematics.SwerveModuleState;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class SwerveModule {
 
@@ -47,11 +33,9 @@ public class SwerveModule {
     private final RelativeEncoder turningEncoder;
 
     private final PIDController turningPidController;
-    // private final SparkPIDController turningPidController;
 
     private final CANcoder absoluteEncoder;
 
-    // private final AnalogInput absoluteEncoder;
     private final boolean absoluteEncoderReversed;
     private final double absoluteEncoderOffsetRad;
 
@@ -99,9 +83,6 @@ public class SwerveModule {
             e.printStackTrace();
         }
 
-        // driveMotor.burnFlash();
-        // turningMotor.burnFlash();
-
         driveMotor.configure(driveMotorConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
 
         driveMotor.configure(driveMotorConfig,  ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
@@ -113,7 +94,6 @@ public class SwerveModule {
         turningPidController = new PIDController(ModuleConstants.kPTurning, ModuleConstants.kITurning,
                 ModuleConstants.kDTurning);
 
-        // turningPidController.setPositionPIDWrappingMaxInput()
         turningPidController.enableContinuousInput(-Math.PI, Math.PI);
         try {
             Thread.sleep(800);
