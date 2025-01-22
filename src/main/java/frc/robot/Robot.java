@@ -4,7 +4,6 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
@@ -18,8 +17,6 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   private final RobotContainer m_robotContainer;
-
-  Servo exampleServo = new Servo(1);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -82,13 +79,7 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {
-
-    
-    exampleServo.set(1.0);
-    exampleServo.setAngle(0.2);
-
-  }
+  public void teleopPeriodic() { }
 
   @Override
   public void testInit() {

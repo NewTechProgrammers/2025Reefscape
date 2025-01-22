@@ -75,9 +75,14 @@ public class SwerveModule {
         return steerMotor.getEncoder().getVelocity();
     }
 
+    public double getAbsoluteEncoderPos() {
+        return absoluteEncoder.getPosition().getValueAsDouble();
+    }
+
     public double getAbsoluteEncoderRad() {
-        double angle = absoluteEncoder.getAbsolutePosition().getValueAsDouble();
+        double angle = absoluteEncoder.getPosition().getValueAsDouble();
         angle *= 2.0 * Math.PI;
+        angle -= absoluteEncoderOffsetRad;
         return angle * (absoluteEncoderReversed ? -1.0 : 1.0);
     }
 
