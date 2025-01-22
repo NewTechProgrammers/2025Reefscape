@@ -77,6 +77,26 @@ public class SwerveSubsystem extends SubsystemBase {
     @Override
     public void periodic() {
         SmartDashboard.putNumber("Robot Heading", getHeading());
+
+        SmartDashboard.putNumber("Robot Heading", getHeading());
+        SmartDashboard.putNumber("FrontLeft Steer:", frontLeft.getSteerPosition());
+        SmartDashboard.putNumber("FrontRight Steer:", frontRight.getSteerPosition());
+        SmartDashboard.putNumber("BackLeft Steer:", backLeft.getSteerPosition());
+        SmartDashboard.putNumber("BackRight Steer:", backRight.getSteerPosition());
+
+        SmartDashboard.putNumber("CANFrontLeft:", frontLeft.getAbsoluteEncoderPos());
+        SmartDashboard.putNumber("CANFrontRight:", frontRight.getAbsoluteEncoderPos());
+        SmartDashboard.putNumber("CANBackLeft:", backLeft.getAbsoluteEncoderPos());
+        SmartDashboard.putNumber("CANBackRight:", backRight.getAbsoluteEncoderPos());
+
+        SmartDashboard.putNumber("Gyro angle: ", (0 - (gyro.getAngle())));
+        SmartDashboard.putNumber("Gyro yaw: ", (0 - (gyro.getYaw())));
+        SmartDashboard.putNumber("Gyro roll: ", (0 - (gyro.getRoll())));
+        SmartDashboard.putNumber("Gyro pitch: ", (0 - (gyro.getPitch())));
+
+        SmartDashboard.putNumber("Gyro X: ", gyro.getRawGyroX());
+        SmartDashboard.putNumber("Gyro Y: ", gyro.getRawGyroY());
+        SmartDashboard.putNumber("Gyro Z: ", gyro.getRawGyroZ());
     }
 
     public void stopModules() {
