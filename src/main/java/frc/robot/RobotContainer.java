@@ -27,7 +27,7 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    DriverStation.silenceJoystickConnectionWarning(true);
+    DriverStation.silenceJoystickConnectionWarning(true); // Setting to ignore warning with "There is no joystick"
     swerveSubsystem.setDefaultCommand(new SwerveJoystickCmd(
           swerveSubsystem,
           () -> -driverJoystick.getRawAxis(OIConstants.kDriverYAxis),
