@@ -3,14 +3,15 @@ package frc.robot.commands;
 import edu.wpi.first.math.filter.SlewRateLimiter;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
+
 import edu.wpi.first.wpilibj2.command.Command;
+
 import frc.robot.subsystems.SwerveSubsystem;
+
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 
 import java.util.function.Supplier;
-
-import com.ctre.phoenix6.swerve.SwerveRequest;
 
 public class SwerveJoystickCmd extends Command {
     private final SwerveSubsystem swerveSubsystem;
