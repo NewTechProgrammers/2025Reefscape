@@ -67,12 +67,13 @@ public class SwerveSubsystem extends SubsystemBase {
         return Math.IEEEremainder(gyro.getAngle(), 360);
     }
 
-    public Rotation2d geRotation2d() {
+    public Rotation2d getRotation2d() {
         return Rotation2d.fromDegrees(getHeading());
     }
 
     @Override
     public void periodic() {
+
         SmartDashboard.putNumber("Robot Heading", getHeading());
 
         SmartDashboard.putNumber("Robot Heading", getHeading());
