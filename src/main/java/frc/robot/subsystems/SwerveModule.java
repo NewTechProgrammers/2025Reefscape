@@ -57,7 +57,7 @@ public class SwerveModule {
         driveMotor.configure(driveMotorConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
         steerMotor.configure(steerMotorConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
 
-        steerPidController = new PIDController(ModuleConstants.kPSteer, 0, 0);
+        steerPidController = new PIDController(ModuleConstants.kPSteer, ModuleConstants.kISteer, ModuleConstants.kDSteer);
         steerPidController.enableContinuousInput(-Math.PI, Math.PI);
 
         resetEncoders();

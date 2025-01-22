@@ -26,6 +26,8 @@ public final class Constants {
       public static final double kDriveEncoderRPM2MeterPerSec = kDriveEncoderRot2Meter / 60;
       public static final double kSteerEncoderRPM2RadPerSec =   kSteerEncoderRot2Rad / 60;
       public static final double kPSteer =                      0.38;
+      public static final double kISteer =                      0.0;
+      public static final double kDSteer =                      0.0;
   }
 
   public static final class DriveConstants {
