@@ -64,15 +64,15 @@ public final class Constants {
       public static final boolean kBackRightAbsoluteEncoderReversed = false;
 
       // Default encoders
-      public static final boolean kFrontLeftSteerEncoderReversed = true;
-      public static final boolean kBackLeftSteerEncoderReversed = true;
-      public static final boolean kFrontRightSteerEncoderReversed = true;
-      public static final boolean kBackRightSteerEncoderReversed = true;
+      public static final boolean kFrontLeftSteerEncoderReversed = false;
+      public static final boolean kBackLeftSteerEncoderReversed = false;
+      public static final boolean kFrontRightSteerEncoderReversed = false;
+      public static final boolean kBackRightSteerEncoderReversed = false;
 
-      public static final boolean kFrontLeftDriveEncoderReversed = false;
-      public static final boolean kBackLeftDriveEncoderReversed = false;
-      public static final boolean kFrontRightDriveEncoderReversed = false;
-      public static final boolean kBackRightDriveEncoderReversed = false;
+      public static final boolean kFrontLeftDriveEncoderReversed = true;
+      public static final boolean kBackLeftDriveEncoderReversed = true;
+      public static final boolean kFrontRightDriveEncoderReversed = true;
+      public static final boolean kBackRightDriveEncoderReversed = true;
 
       // Encoder values (absolute + default) should be increasing while ccw run (from the top view)
       public static final double kFrontLeftAbsoluteEncoderOffsetRad = 0;
