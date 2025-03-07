@@ -5,9 +5,28 @@
     "data": {
       "commands": [
         {
-          "type": "path",
+          "type": "parallel",
           "data": {
-            "pathName": "start to 20"
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Start to 9"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "Tower L2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Shoot"
           }
         },
         {
@@ -17,7 +36,7 @@
               {
                 "type": "path",
                 "data": {
-                  "pathName": "to stasion from 20"
+                  "pathName": "9 to player"
                 }
               },
               {
@@ -30,16 +49,9 @@
           }
         },
         {
-          "type": "sequential",
+          "type": "wait",
           "data": {
-            "commands": [
-              {
-                "type": "wait",
-                "data": {
-                  "waitTime": 1.5
-                }
-              }
-            ]
+            "waitTime": 1.5
           }
         },
         {
@@ -49,11 +61,11 @@
               {
                 "type": "path",
                 "data": {
-                  "pathName": "From staision to 19"
+                  "pathName": "player to 8"
                 }
               },
               {
-                "type": "sequential",
+                "type": "parallel",
                 "data": {
                   "commands": [
                     {
