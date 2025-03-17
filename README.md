@@ -54,7 +54,7 @@ To start a new FRC project with YAGSL:
 6. Copy necessary files and integrate them with your project.
 7. Modify `build.gradle` to include YAGSL dependencies.
 
-## ⚙️ YAGSL Setup
+## ⚙️ YAGSL Setup 
 
 - Ensure you have the correct dependencies in `build.gradle`:
   
